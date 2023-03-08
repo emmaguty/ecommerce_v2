@@ -41,8 +41,12 @@ export const Product = () => {
     }, [])
 
     return (
-        <div className='app__Product'>
-            
+        <div className='app__Product active'>
+
+            <div className='app__Product-heading'>
+                <h1>Add Product</h1>
+            </div>
+
             <table>
                 <tr>
                     <th>ID</th>
@@ -65,23 +69,22 @@ export const Product = () => {
                     })
                 }
             </table>
-            <h1>Add Product</h1>
             <form>
                 <div>
                     <label for="">Name</label>
-                    <input onChange={(e) => setName(e.target.value)} type={"text"} name="" required/>
+                    <input onChange={(e) => setName(e.target.value)} type={"text"} name="" required />
                 </div>
                 <div>
                     <label for="">Description</label>
-                    <input onChange={(e) => setDescription(e.target.value)} type={"text"} name="" required/>
+                    <input onChange={(e) => setDescription(e.target.value)} type={"text"} name="" required />
                 </div>
                 <div>
                     <label for="">Quantity</label>
-                    <input onChange={(e) => setQty(e.target.value)} type={"text"} name="" required/>
+                    <input onChange={(e) => setQty(e.target.value)} type={"text"} name="" required />
                 </div>
                 <div>
                     <label for="">Price</label>
-                    <input onChange={(e) => setPrice(e.target.value)} type={"text"} name=""  required />
+                    <input onChange={(e) => setPrice(e.target.value)} type={"text"} name="" required />
                 </div>
                 <div>
                     <label for="">Image</label>

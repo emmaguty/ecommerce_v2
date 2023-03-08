@@ -16,13 +16,13 @@ function App() {
         <Sidebar />
 
         <Switch>
-          <Route path='/' exact>
+          <Route path='/products' exact>
             <Product />
           </Route>
           <Route path='/brand' exact>
             <Brand />
           </Route>
-          <Route path='/category' exacts>
+          <Route path='/categorys' exacts>
             <Category />
           </Route>
         </Switch>

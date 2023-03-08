@@ -4,6 +4,7 @@
 }
 
 .app__sidebar {
+  /* position: sticky; */
   background: #aaa;
   height: 100vh;
   padding: 0;
@@ -13,8 +14,9 @@
   padding: 10px;
 }
 
-.app__product {
-  padding: 10px;
+form {
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 input,
@@ -58,22 +60,64 @@ th {
   border-collapse: collapse;
   border: 1px solid;
   padding: 10px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .item {
   padding: 9px;
+  position: relative;
 }
+
+
 
 .item a {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  position: relative;
 }
 
 .item:hover {
   background-color: gray;
 }
 
-.item:active {
-  background-color: gray;
+.item a.active {
+  font-weight: bold;
+}
+
+.app__Product-heading {
+  padding: 10px;
+  background-color: #ddd;
+  border-bottom: 1px solid #aaa;
+  border-top: 1px solid #aaa;
+  margin-bottom: 10px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.item .sub-item {
+  display: none;
+  position: absolute;
+  background-color: #aaa;
+  color: white;
+  left: 100px;
+  top: 0px;
+  /* left: 100px; */
+  width: 200px; 
+  bottom: auto;
+  height: max-content;
+  font-size: 18px; 
+}
+
+.item .sub-item div {
+  padding: 12px;
+}
+
+.sub-item div:hover {
+  font-weight: bold;
+}
+
+.item:hover .sub-item {
+  display: block;
 }
