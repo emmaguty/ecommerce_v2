@@ -6,6 +6,10 @@
 .app__sidebar {
   background: #aaa;
   height: 100vh;
+  padding: 0;
+}
+
+.app__sidebar h1 {
   padding: 10px;
 }
 
@@ -13,7 +17,9 @@
   padding: 10px;
 }
 
-input, select, button {
+input,
+select,
+button {
   padding: 5px;
   margin: 5px;
   min-width: 200px;
@@ -46,8 +52,28 @@ button:hover {
   box-shadow: 1px 1px 2px lightblue;
 }
 
-table, td, th {
+table,
+td,
+th {
   border-collapse: collapse;
   border: 1px solid;
   padding: 10px;
+}
+
+.item {
+  padding: 9px;
+}
+
+.item a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.item:hover {
+  background-color: gray;
+}
+
+.item:active {
+  background-color: gray;
 }
