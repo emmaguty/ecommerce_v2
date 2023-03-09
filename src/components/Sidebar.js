@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const Sidebar = () => {
@@ -7,31 +7,36 @@ const Sidebar = () => {
     <div className='app__sidebar'>
       <h1>Store</h1>
       <div className='item'>
-        <NavLink to="/products">Product</NavLink>
+        Product
         <div className='sub-item'>
-          <div>Add Product</div>
-          <div>List Product</div>
-          <div>More</div>
+          <div>
+            <Link to="/products">Add Product</Link>
+          </div>
+          <div>
+            <Link to="/products-list">List Product</Link>
+          </div>
         </div>
       </div>
       <div className='item'>
-        <NavLink to="/brand">
-          Brand
-        </NavLink>
+        Brand
         <div className='sub-item'>
-          <div>Add Brand</div>
-          <div>List Brand</div>
-          <div>More</div>
+          <div>
+            <Link to="/brand">Add Brand</Link>
+          </div>
+          <div>
+            <Link to="/brand-list">List Brand</Link>
+          </div>
         </div>
       </div>
       <div className='item'>
-        <NavLink to="/categorys">
-          Category
-        </NavLink>
+        Category
         <div className='sub-item'>
-          <div>Add Category</div>
-          <div>List Category</div>
-          <div>More</div>
+          <div>
+            <Link to="/categorys">Add Category</Link>
+          </div>
+          <div>
+            <Link to="/categorys-list">List Category</Link>
+          </div>
         </div>
       </div>
     </div>

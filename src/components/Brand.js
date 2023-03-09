@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import axios from 'axios';
 
 export const Brand = () => {
 
-  const [brandList, setBrandList] = useState([]);
+
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
 
@@ -20,36 +20,11 @@ export const Brand = () => {
 
   }
 
-  const getBrand = async () => {
-    const data = await axios.get('http://localhost:5050/brand');
-    console.log(data);
-    setBrandList(data.data);
-  }
-
-  useEffect(() => {
-    getBrand();
-  }, [])
-
   return (
     <div className='app__Product'>
-
-      <table>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-        </tr>
-        {
-          brandList.map((item) => {
-            return (
-              <tr>
-                <td>{item.brand_id}</td>
-                <td>{item.brand_name}</td>
-              </tr>
-            )
-          })
-        }
-      </table>
-      <h1>Add Brand</h1>
+      <div className='app__Product-heading'>
+        <h1>Add Brand</h1>
+      </div>
       <form>
         <div>
           <label for="">Name</label>

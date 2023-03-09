@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import axios from 'axios';
 
 export const Category = () => {
 
-  const [categoryList, setCategoryList] = useState([]);
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   // const [brand, setBrand] = useState("");
@@ -22,36 +21,11 @@ export const Category = () => {
 
   }
 
-  const getCategory = async () => {
-    const data = await axios.get('http://localhost:5050/category');
-    console.log(data);
-    setCategoryList(data.data);
-  }
-
-  useEffect(() => {
-    getCategory();
-  }, [])
-
   return (
     <div className='app__Product'>
-
-      <table>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-        </tr>
-        {
-          categoryList.map((item) => {
-            return (
-              <tr>
-                <td>{item.category_id}</td>
-                <td>{item.category_name}</td>
-              </tr>
-            )
-          })
-        }
-      </table>
-      <h1>Add Category</h1>
+      <div className='app__Product-heading'>
+        <h1>Add Category</h1>
+      </div>
       <form>
         <div>
           <label for="">Name</label>
