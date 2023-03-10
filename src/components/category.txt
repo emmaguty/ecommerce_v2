@@ -1,0 +1,72 @@
+import React, { useEffect, useState } from 'react'
+
+import axios from 'axios';
+
+const Category = () => {
+
+  // const [file, setFile] = useState(null)
+  const [categoryList, setCategoryList] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:5050/')
+      .then(res => res.json())
+      .then(res => setCategoryList(res))
+      .catch(err => setCategoryList(err))
+  }, [])
+
+  // const selectedHandler = e => {
+  //   setFile(e.target.files[0])
+  // }
+
+  // const senHandler = () => {
+  //   if (!file) {
+  //     alert('Deberias subir el archivo')
+  //     return
+  //   }
+
+  //   const formdata = new FormData()
+  //   formdata.append('image', file)
+
+  //   fetch('http://localhost:5050/', {
+  //     method: 'POST',
+  //     body: formdata
+  //   })
+  //     .then(res => res.text())
+  //     .then(res => console.log(res))
+  //     .catch(err => { console.log(err) })
+
+  //   document.getElementById('fileinput').value = null
+
+  //   setFile(null)
+
+  // }
+
+  // const getCategoryList = async () => {
+  //   const result = await axios.get('http://localhost:5050/category')
+  //   setCategoryList(result.data)
+  // }
+
+  // useEffect(()=>{
+  //     getCategoryList()
+  // },[])
+
+  return (
+    <div>
+      <h2>Shop Our Top Categories</h2>
+
+      {
+        categoryList.map(item => {
+          return (
+            <div className='category-item' key={item}>
+              <p>{item.category_name}</p>
+              <img alt={item.category_name} src={`http://localhost:5050/ + item}`} />
+            </div>
+          )
+        })
+      }
+
+    </div>
+  )
+}
+
+export default Category

@@ -121,3 +121,36 @@ th {
 .item:hover .sub-item {
   display: block;
 }
+
+.container {
+  display: flex;
+}
+
+.container img {
+  width: 200px;
+}
+
+.category-item {
+  margin: 10px;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.category-item p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.category-item img {
+  border-radius: 10px;
+}
+
+.category-item:hover img {
+  transform: scale(1.2);
+  transition: all 1s ease;
+}
